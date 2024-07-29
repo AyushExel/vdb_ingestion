@@ -11,7 +11,7 @@ def ingest_chroma(batch_size, num_batches, vector_size):
     # Create a collection in ChromaDB
     collection_name = "randomchromadb_collection"
     collection = client.create_collection(name=collection_name)
-    try: # chroma can fail at higher batch sizes
+    try: # chroma can fail with larger batch sizes
         total_time = 0.0
         batch_times = []
         
